@@ -21,3 +21,4 @@ spring:
     username: admin
     password: admin
     port: 15672
+    virtual-host: /
