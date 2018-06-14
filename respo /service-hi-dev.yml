@@ -20,5 +20,5 @@ spring:
     host: localhost
     username: admin
     password: admin
-    port: 15672
+    port: 5672
     virtual-host: /localhost
