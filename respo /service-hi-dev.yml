@@ -16,3 +16,8 @@ server:
 spring:
   application:
     name: service-hi
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    port: 15672
