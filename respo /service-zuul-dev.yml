@@ -36,7 +36,22 @@ server:
 spring:
   application:
     name: service-zuul
-
+  rabbitmq:
+    host: localhost
+    username: admin
+    password: admin
+    port: 5672
+    virtual-host: /localhost
+#开启端点以及跨域,默认web只开启了health和info
+management:
+  endpoints:
+    web:
+      exposure: 
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+        
 zuul:
   max:
     host:
