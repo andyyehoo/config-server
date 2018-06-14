@@ -70,6 +70,9 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: service-hi
+    api-b-c:
+      path: /api-b/**
+      serviceId: service-hi
 ##绑定具体ip
     api-a-url:
       path: /api-a-url/**
