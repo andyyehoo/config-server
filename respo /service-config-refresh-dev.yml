@@ -16,7 +16,7 @@ server:
   port: 8764
 spring:
   application:
-    name: service-hi
+    name: service-config-refresh
   rabbitmq:
     host: localhost
     username: admin
