@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: service-sms
+  redis:
+    database: 0
+    host: 47.100.193.105
+    port: 6379
+    password: bmx84185858
+    jedis:
+      pool:
+        max-active: 1024
+        max-wait: -1ms
+        max-idle: 300
+        min-idle: 0
+    timeout: 10000ms
+  jpa:
+      generate-ddl: false
+      show-sql: true
+      hibernate:
+        ddl-auto: none
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.100.193.105:3306/xmbg?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: bmx
+    password: 84185858
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000      # 配置一个连接在池中最小生存的时间，单位是毫秒
+    poolPreparedStatements: true
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat, wall, log4j
+    # 通过connectProperties属性来打开mergeSql功能，慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+eureka:
+  client:
+    ##开启健康检查
+    healthcheck:
+        enabled: true
+    ##健康检查线程池大小
+    heartbeat-executor-thread-pool-size: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: ${maven.service.sms.post}
