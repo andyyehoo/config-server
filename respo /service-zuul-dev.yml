@@ -69,10 +69,10 @@ zuul:
 ##绑定服务
     api-b:
       path: /api-b/**
-      serviceId: service-hi
+      serviceId: service-config-refresh
     api-b-c:
       path: /api-b-c/**
-      serviceId: service-hi
+      serviceId: service-config-refresh
 ##绑定具体ip
     api-a-url:
       path: /api-a-url/**
