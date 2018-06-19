@@ -43,5 +43,3 @@ eureka:
     heartbeat-executor-thread-pool-size: 5
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-server:
-  port: ${maven.service.sms.post}
