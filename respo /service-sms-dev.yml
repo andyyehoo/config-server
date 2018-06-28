@@ -99,12 +99,12 @@ spring:
 #    # 通过connectProperties属性来打开mergeSql功能，慢SQL记录
 #    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
-eureka:
-  client:
-    ##开启健康检查
-    healthcheck:
-        enabled: true
-    ##健康检查线程池大小
-    heartbeat-executor-thread-pool-size: 5
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+# eureka:
+#  client:
+#    ##开启健康检查
+#    healthcheck:
+#        enabled: true
+#    ##健康检查线程池大小
+#    heartbeat-executor-thread-pool-size: 5
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
